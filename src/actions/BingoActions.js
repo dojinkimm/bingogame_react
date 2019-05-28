@@ -4,8 +4,7 @@ import {
   CHOOSE_NUM,
   CHANGE_TURN,
   ADD_BINGO_ONE,
-  ADD_BINGO_TWO,
-  FIND_WINNER
+  ADD_BINGO_TWO
 } from "./types";
 
 export const startGame = () => { // 게임시작
@@ -43,9 +42,3 @@ export const addBingoTwo = (num) =>{ //플레이어2의 빙고판 변화시
   }
 }
 
-export const findWinner = (player) =>{
-  return{
-    type: FIND_WINNER,
-    player
-  }
-}

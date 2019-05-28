@@ -4,8 +4,7 @@ import {
   CHOOSE_NUM,
   CHANGE_TURN,
   ADD_BINGO_ONE,
-  ADD_BINGO_TWO,
-  FIND_WINNER
+  ADD_BINGO_TWO
 } from "../actions/types";
 
 
@@ -16,7 +15,6 @@ const initState = {
   whoseTurn: "player1", //누구 턴인지
   numBingoOne: [], //1번 플레이어의 빙고판
   numBingoTwo:[],//2번 플레이어의 빙고판
-  winner: null //승자
 }; 
 
 const rootReducer = (state = initState, action) => {
@@ -52,11 +50,6 @@ const rootReducer = (state = initState, action) => {
       return{
         ...state,
         numBingoTwo: action.num,
-      }
-    case FIND_WINNER:
-      return{
-        ...state,
-        winner: action.player
       }
     default:
       return state;

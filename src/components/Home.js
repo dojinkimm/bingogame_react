@@ -35,9 +35,6 @@ class Home extends Component {
     this.props.resetGame()
     this.handleGame()
   }
-  componentDidMount(a) {
-    console.log(a)
-  }
   render() {
     let { isPlaying } = this.props;
     const beginButton = !isPlaying ? ( //게임 중인지에 따라서 다른 버튼을 보여준다
@@ -68,9 +65,7 @@ class Home extends Component {
             //플레이어 1 부분
           }
           <div className="col">
-            <div className="card text-center bg-light">
-              <h3>Player 1</h3>
-            </div>
+            
             <Board name="player1" array={this.state.arr1} />
           </div>
 
@@ -82,9 +77,6 @@ class Home extends Component {
             //플레이어 2 부분
           }
           <div className="col">
-            <div className="card text-center bg-light">
-              <h3>Player 2</h3>
-            </div>
             <Board name="player2" array={this.state.arr2} />
           </div>
 
