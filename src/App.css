@@ -31,3 +31,27 @@
     transform: rotate(360deg);
   }
 }
+
+.board {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 60px;
+  width: 60px;
+  border: 2px solid black;
+  display: flex;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+}
+
+.selected{
+  text-align: center
+}
